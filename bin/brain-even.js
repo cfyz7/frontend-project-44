@@ -13,34 +13,38 @@ function getRandomInt(min, max) {
 var total = (getRandomInt(0, 101));
 console.log(`Question:`, total);
 
-var numberRevue = (total) => {
-  if(total % 2 === 0) {
-    return true;
-  }
-  return false;
-}
-var result = numberRevue(total) 
 
-var userAnswer = readlineSync.question('Your answer: ') 
-var reverseUserAnswer = (userAnswer) => {
-  if (userAnswer === 'yes') {
-    return 'no'
-  }
-  return 'yes'
-}
-var reverseAnswer = (reverseUserAnswer(userAnswer))
+// var numberRevue = (total) => {
+//   if(total % 2 === 0) {
+//     return true;
+//   }
+//   return false;
+// }
+// var result = numberRevue(total) 
 
-var resultRevue = (result, userAnswer) => {
-  if (result === true && userAnswer === 'yes') {
-    return 'Correct!'
-  }
-  else if (result === false && userAnswer === 'no') {
-    return 'Correct!'
-  }
-  return `'${userAnswer}' is wrong answer ;(. Correct answer was '${reverseAnswer}'\nLet's try again, Bill!`
-}
-console.log(resultRevue(result, userAnswer))
+// var userAnswer = readlineSync.question('Your answer: ') 
+// var reverseUserAnswer = (userAnswer) => {
+//   if (userAnswer === 'yes') {
+//     return 'no'
+//   }
+//   return 'yes'
+// }
+// var reverseAnswer = (reverseUserAnswer(userAnswer))
 
+// var resultRevue = (result, userAnswer) => {
+//   if (result === true && userAnswer === 'yes') {
+//     return 'Correct!'
+//   }
+//   else if (result === false && userAnswer === 'no') {
+//     return 'Correct!'
+//   }
+//   return `'${userAnswer}' is wrong answer ;(. Correct answer was '${reverseAnswer}'\nLet's try again, Bill!`
+// }
+// var lastChange = (resultRevue(result, userAnswer));
+// console.log(lastChange);
+
+console.log(`Question:`, getRandomInt(1, 101))
+console.log(`Question:`, getRandomInt(1, 101))
 
 
  
