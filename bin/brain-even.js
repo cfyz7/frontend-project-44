@@ -17,13 +17,14 @@ let randomNumber2 = (getRandomInt(0, 101));
 let randomNumber3 = (getRandomInt(0, 101)); 
 
 console.log(`Question:`, randomNumber);  
+
 const numberReview = (randomNumber) => {
   if(randomNumber % 2 === 0) {
     return true;
   }
   return false;
-};
-numberReview(randomNumber)
+}; 
+
 
 const result = numberReview(randomNumber);
 const result2 = numberReview(randomNumber2);
@@ -57,8 +58,7 @@ if (totalFuncResultReview === 'Correct!') {
   else {
     console.log(`'${userAnswer2}' is wrong answer ;(. Correct answer was '${reverseAnswer}'\nLet's try again, ${userName}!`)
   }
-}; 
-
+};  
 
 if (totalResult === 'Correct!') { 
   console.log(`Question:`, randomNumber3);
