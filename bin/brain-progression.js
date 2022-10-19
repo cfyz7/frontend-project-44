@@ -15,18 +15,20 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
 
-const makeProgressoin = (number, step, numLength, dodge) => {
+const randomn = getRandomInt(5, 10)
+const makeProgressoin = (number, step, numLength, doddge) => {
   const tot = [];
   for (let i = number, j = 0; j <= numLength; j += 1, i += step) {
     tot.push(i);
   }
-  result = tot[dodge];
-  tot[dodge] = '..';
+  result = tot[doddge];
+  tot[doddge] = '..';
   total = tot.join(' ');
   console.log(`Question: ${total}`);
   return total, result;
 };
-makeProgressoin(getRandomInt(0, 101), getRandomInt(0, 11), getRandomInt(5, 10), getRandomInt(0, 10));
+makeProgressoin(getRandomInt(0, 101), getRandomInt(0, 11), randomn, getRandomInt(0, randomn));
+
 
 const answerOfUser = readlineSync.question('Your answer: ');
 const numberOfUser = Number(answerOfUser);
