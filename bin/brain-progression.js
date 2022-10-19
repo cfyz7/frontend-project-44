@@ -1,10 +1,13 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
+import _ from 'lodash';
 
+let result = 0;
+let total = '';
 console.log('Welcome to the Brain Games!');
 const userName = readlineSync.question('May I have your name? ');
 console.log(`Hello, ${userName}!`);
-console.log('What is the result of the expression?');
+console.log('What number is missing in the progression?');
 
 function getRandomInt(min, max) {
   min = Math.ceil(min);
@@ -12,22 +15,19 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
 
-let result = 0;
-const chars = ['+', '-', '*'];
-const threeRandomNumber = (getRandomInt(0, 3));
-const randomChar = (chars[threeRandomNumber]);
-
-const operationWithNumbers = (firstRandomNumber, randomChar, secondRandomNumber) => {
-  console.log(`Question: ${firstRandomNumber} ${randomChar} ${secondRandomNumber}`);
-  if (randomChar === '+') {
-    result = firstRandomNumber + secondRandomNumber;
-  } else if (randomChar === '-') {
-    result = firstRandomNumber - secondRandomNumber;
-  } else result = firstRandomNumber * secondRandomNumber;
-  return result;
+const makeProgressoin = (number, step, numLength, dodge) => {
+  const tot = [];
+  for (let i = number, j = 0; j <= numLength; j += 1, i += step) {
+    tot.push(i);
+  }
+  result = tot[dodge];
+  tot[dodge] = '..';
+  total = tot.join(' ');
+  console.log(`Question: ${total}`);
+  return total, result;
 };
+makeProgressoin(getRandomInt(0, 101), getRandomInt(0, 11), getRandomInt(5, 10), getRandomInt(0, 10));
 
-operationWithNumbers((getRandomInt(0, 101)), randomChar, (getRandomInt(0, 101)));
 const answerOfUser = readlineSync.question('Your answer: ');
 const numberOfUser = Number(answerOfUser);
 const reviewCorrectOperation = (result) => {
@@ -36,13 +36,12 @@ const reviewCorrectOperation = (result) => {
   }
   return `'${answerOfUser}' is wrong answer ;(. Correct answer was '${result}'.\nLet's try again, ${userName}!`;
 };
-
 const resultOperation = reviewCorrectOperation(result);
 console.log(resultOperation);
 
 let resultOperation2 = '';
 if (resultOperation === 'Correct!') {
-  operationWithNumbers((getRandomInt(0, 101)), randomChar, (getRandomInt(0, 101)));
+  makeProgressoin(getRandomInt(0, 101), getRandomInt(0, 11), getRandomInt(5, 10), getRandomInt(0, 10));
   const answerOfUser2 = readlineSync.question('Your answer: ');
   if (Number(answerOfUser2) === result) {
     resultOperation2 += 'Correct!';
@@ -54,7 +53,7 @@ if (resultOperation === 'Correct!') {
 
 let resultOperation3 = '';
 if (resultOperation2 === 'Correct!') {
-  operationWithNumbers((getRandomInt(0, 101)), randomChar, (getRandomInt(0, 101)));
+  makeProgressoin(getRandomInt(0, 101), getRandomInt(0, 11), getRandomInt(5, 10), getRandomInt(0, 10));
   const answerOfUser3 = readlineSync.question('Your answer: ');
   if (Number(answerOfUser3) === result) {
     resultOperation3 += `Correct! Congratulations, ${userName}!`;
