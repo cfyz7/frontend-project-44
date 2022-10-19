@@ -3,8 +3,6 @@ import readlineSync from 'readline-sync';
 import _ from 'lodash';
 
 let total = [];
-const result = [];
-const result2 = [];
 console.log('Welcome to the Brain Games!');
 const userName = readlineSync.question('May I have your name? ');
 console.log(`Hello, ${userName}!`);
@@ -27,15 +25,11 @@ const operationWithNumbers = (firstRandomNumber, secondRandomNumber, result = []
       result2.push(i);
     }
   }
-  console.log(result)
-  console.log(result2)
   total = _.intersection(result, result2);
-  console.log(total)
   total = total.at(-1);
-  console.log(total);
   return total;
 };
-operationWithNumbers((getRandomInt(0, 101)), (getRandomInt(0, 101)));
+operationWithNumbers(getRandomInt(0, 101), getRandomInt(0, 101));
 
 const answerOfUser = readlineSync.question('Your answer: ');
 const numberOfUser = Number(answerOfUser);
@@ -72,6 +66,4 @@ if (resultOperation2 === 'Correct!') {
     resultOperation3 += `'${answerOfUser3}' is wrong answer ;(. Correct answer was '${total}'.\nLet's try again, ${userName}!`;
   }
   console.log(resultOperation3);
-};
-
-
+}
