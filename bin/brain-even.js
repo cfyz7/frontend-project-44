@@ -1,70 +1,55 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
-// import {sayHello} from '../src/cli.js';
-// sayHello();
-let totalResult = '';
-console.log('Welcome to the Brain Games!');
-const userName = readlineSync.question('May I have your name? ');
-console.log(`Hello, ${userName}!`);
-console.log('Answer "yes" if the number is even, otherwise answer "no".');
+console.log('Welcome to the Brain Games!')  
+var userName = readlineSync.question('May I have your name? ')
+console.log(`Hello, ${userName}!`) 
+console.log('Answer "yes" if the number is even, otherwise answer "no".')
+
 function getRandomInt(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min)) + min;
 }
+var total = (getRandomInt(0, 101));
+console.log(`Question:`, total);
+var total2 = getRandomInt(1, 101);
+var total3 = getRandomInt(1, 101); 
 
-const randomNumber = (getRandomInt(0, 101));
-const randomNumber2 = (getRandomInt(0, 101));
-const randomNumber3 = (getRandomInt(0, 101));
-
-console.log('Question:', randomNumber);
-
-const numberReview = (randomNumber) => {
-  if (randomNumber % 2 === 0) {
+var numberReview = (total, total2, total3) => {
+  if(total % 2 === 0) {
     return true;
   }
   return false;
-};
+}
+var result = numberReview(total);
+var result2 = numberReview(total2);
+var result3 = numberReview(total3);
 
-const result = numberReview(randomNumber);
-const result2 = numberReview(randomNumber2);
-const result3 = numberReview(randomNumber3);
-
-const userAnswer = readlineSync.question('Your answer: ');
-const reverseUserAnswer = (userAnswer) => {
-  if (userAnswer === 'yes') {
+var answerOfUser = readlineSync.question('Your answer: ') 
+var reverseAnswerOfUser = (answerOfUser) => {
+  if (answerOfUser === 'yes') {
     return 'no';
   }
   return 'yes';
-};
+}
+var reverseAnswer = (reverseAnswerOfUser(answerOfUser))
 
-const reverseAnswer = (reverseUserAnswer(userAnswer));
-const resultReview = (result, userAnswer) => {
-  if ((result === true && userAnswer === 'yes') || (result === false && userAnswer === 'no')) {
+var resultReview = (result, answerOfUser) => {
+  if ((result === true && answerOfUser === 'yes') || (result === false && answerOfUser=== 'no')) {
     return 'Correct!';
-  }
-  return `'${userAnswer}' is wrong answer ;(. Correct answer was '${reverseAnswer}'\nLet's try again, !`;
-};
-const totalFuncResultReview = (resultReview(result, userAnswer));
-console.log(totalFuncResultReview);
-
-if (totalFuncResultReview === 'Correct!') {
-  console.log('Question:', randomNumber2);
-  const userAnswer2 = readlineSync.question('Your answer: ');
-  if ((result2 === true && userAnswer2 === 'yes') || (result2 === false && userAnswer2 === 'no')) {
-    totalResult += 'Correct!';
-    console.log(totalResult);
-  } else {
-    console.log(`'${userAnswer2}' is wrong answer ;(. Correct answer was '${reverseAnswer}'\nLet's try again, ${userName}!`);
-  }
+  } 
+  return `'${answerOfUser}' is wrong answer ;(. Correct answer was '${reverseAnswer}'\nLet's try again, ${userName}!`
 }
+var totalResultReview = (resultReview(result, answerOfUser));
+console.log(totalResultReview); 
 
-if (totalResult === 'Correct!') {
-  console.log('Question:', randomNumber3);
-  const userAnswer3 = readlineSync.question('Your answer: ');
-  if ((result3 === true && userAnswer3 === 'yes') || (result3 === false && userAnswer3 === 'no')) {
-    console.log(`Correct!\nCongratulations, ${userName}!`);
-  } else {
-    console.log(`'${userAnswer3}' is wrong answer ;(. Correct answer was '${reverseAnswer}'\nLet's try again, ${userName}!`);
-  }
-}
+// console.log(`Question:`, total2);
+// var answerOfUser = readlineSync.question('Your answer: ') 
+// var totalResultReview2 = (resultReview(result2, answerOfUser)); 
+// console.log(totalResultReview2);
+
+// console.log(`Question:`, total3);
+// var answerOfUser = readlineSync.question('Your answer: ') 
+// var totalResultReview3 = (resultReview(result3, answerOfUser));
+// console.log(totalResultReview3);
+// console.log(`Congratulations, ${userName}!`)
