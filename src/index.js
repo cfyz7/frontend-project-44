@@ -5,8 +5,9 @@ const gamesForMind = () => {
   console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
-  console.log(uniqQuestion())  
-  for (let i = 1; i <= 3; i += 1) { 
+  console.log(uniqQuestion()) 
+  const totalRound = 3 
+  for (let i = 1; i <= totalRound; i += 1) { 
     const [question, result] = reviewResult();
     console.log(`Question: ${question}`); 
     const answerOfUser = readlineSync.question('Your answer: '); 
