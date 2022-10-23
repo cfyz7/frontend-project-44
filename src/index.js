@@ -1,7 +1,7 @@
 import readlineSync from 'readline-sync';
 import { uniqQuestion, reviewResult } from '../games/prime.js';
  
-const sayHello = () => {
+const gamesForMind = () => {
   console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
@@ -18,4 +18,4 @@ const sayHello = () => {
   }
   console.log(`Congretulations, ${userName}!`)
 };
-export default sayHello;
+export default gamesForMind;
