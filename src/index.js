@@ -1,12 +1,11 @@
 import readlineSync from 'readline-sync';
-import { uniqQuestion, reviewResult } from '../games/prime.js';
- 
-const gamesForMind = () => {
+const totalRound = 3;
+
+const gamesForMind = (uniqQuestion, reviewResult) => {
   console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
-  console.log(uniqQuestion()) 
-  const totalRound = 3 
+  console.log(uniqQuestion()); 
   for (let i = 1; i <= totalRound; i += 1) { 
     const [question, result] = reviewResult();
     console.log(`Question: ${question}`); 
@@ -17,6 +16,6 @@ const gamesForMind = () => {
     }
     console.log('Correct!');
   }
-  console.log(`Congretulations, ${userName}!`)
+  console.log(`Congretulations, ${userName}!`);
 };
 export default gamesForMind;

@@ -8,4 +8,3 @@ const sayHello = () => {
 };
 
 export { sayHello };
- 
