@@ -1,13 +1,10 @@
 import gamesForMind from '../index.js';
 import { randomNumber } from '../makeRandom.js';
 
-export const uniqQuestion = () => 'What is the result of the expression?'
-
+export const uniqQuestion = () => 'What is the result of the expression?';
 const chars = ['+', '-', '*'];
-const numberChars = randomNumber(0, 3);
-const randomChar = (chars[numberChars]);
-
 const reviewNumber = (nums) => { 
+  console.log(nums)
   let total = 0; 
   const modString = nums.split(' ')
   let char = modString[1]
@@ -25,7 +22,7 @@ const reviewNumber = (nums) => {
 };
 
 const reviewResult = () => {
-    const question = `${randomNumber(1, 100)} ${randomChar} ${randomNumber(1, 100)}`;
+    const question = `${randomNumber(1, 100)} ${chars[randomNumber(0, 2)]} ${randomNumber(1, 100)}`;
     const result = reviewNumber(question)
     return [question, result];
   };
