@@ -9,7 +9,7 @@ const reviewNumber = (num) => {
   }
   return false;
 };
-  
+
 const reviewResult = () => {
   const question = randomNumber(1, 101);
   const result = reviewNumber(question) ? 'yes' : 'no';
