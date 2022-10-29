@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import gamesForMind from '../index.js';
-import { randomNumber } from '../makeRandom.js';
+import randomNumber from '../makeRandom.js';
 
 export const uniqQuestion = () => 'What number is missing in the progression?';
 
