@@ -7,4 +7,4 @@ const sayHello = () => {
   return userName;
 };
 
-export { sayHello };
+export default sayHello;
