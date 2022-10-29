@@ -16,6 +16,6 @@ const gamesForMind = (uniqQuestion, reviewResult) => {
     }
     console.log('Correct!');
   }
-  console.log(`Congretulations, ${userName}!`)
+  console.log(`Congratulations, ${userName}!`)
 };
 export default gamesForMind;
