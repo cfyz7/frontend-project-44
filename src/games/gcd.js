@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import { randomNumber } from '../makeRandom.js';
+import randomNumber from '../makeRandom.js';
 import gamesForMind from '../index.js';
 
 export const uniqQuestion = () => 'Find the greatest common divisor of given numbers.';

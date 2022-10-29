@@ -1,5 +1,5 @@
 import gamesForMind from '../index.js';
-import { randomNumber } from '../makeRandom.js';
+import randomNumber from '../makeRandom.js';
 
 export const uniqQuestion = () => 'What is the result of the expression?';
 const chars = ['+', '-', '*'];
