@@ -21,7 +21,6 @@ const reviewNumber = (nums) => {
     total = num1 * num2
   } 
   total = String(total)
-  console.log(total)
   return total;
 };
 

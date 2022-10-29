@@ -24,7 +24,6 @@ const reviewNumber = (numbers) => {
   }
   total = _.intersection(result1, result2);
   total = String(total.at(-1));
-  console.log(total)
   return total;
 };
 

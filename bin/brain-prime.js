@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import gamesForMind from '../src/index.js'
+import gamePrime from '../src/games/prime.js'
 
 gamePrime();
