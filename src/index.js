@@ -11,7 +11,7 @@ const gamesForMind = (uniqQuestion, reviewResult) => {
     console.log(`Question: ${question}`); 
     const answerOfUser = readlineSync.question('Your answer: '); 
     if (answerOfUser != result) {
-      console.log(`'${answerOfUser}' is wrong answer ;(. Correct answer was '${result}'.\nLet's try again, ${userName}`);
+      console.log(`'${answerOfUser}' is wrong answer ;(. Correct answer was '${result}'.\nLet's try again, ${userName}!`);
       return;
     }
     console.log('Correct!');
