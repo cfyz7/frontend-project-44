@@ -7,7 +7,6 @@
 - Настройка окружения
 - ```npm link```
 - Запуск игры
- 
 - ```brain-even
 brain-calc
 brain-gcd
