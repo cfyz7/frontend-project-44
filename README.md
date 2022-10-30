@@ -7,7 +7,7 @@
 По итогу вас либо поздравят с победой, либо предложат сыграть ещё. Удачи!
 
 ## Примеры удачной и неудачной игры
-![Удачная игра](/frontend-project-44/images/game1.jpg)
+![Удачная игра](https://github.com/cfyz7/frontend-project-44/images/game1.jpg)
 ![Неудачная игра](/frontend-project-44/images/game2.jpg)
 
 ## Минимальные системные требования
