@@ -7,8 +7,8 @@
 По итогу вас либо поздравят с победой, либо предложат сыграть ещё. Удачи!
 
 ## Примеры удачной и неудачной игры
-![Удачная игра](https://github.com/cfyz7/frontend-project-44/raw/master/images/game1.jpg)
-![Неудачная игра](/frontend-project-44/images/game2.jpg)
+![Удачная игра](https://github.com/cfyz7/frontend-project-44/raw/master/images/game1.png)
+![Неудачная игра](https://github.com/cfyz7/frontend-project-44/raw/master/images/game2.png)
 
 ## Минимальные системные требования
 - Операционная система Linux(Ubuntu), MacIOS, или Windows 10 и выше с наличием командной строки
