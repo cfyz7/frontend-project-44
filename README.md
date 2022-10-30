@@ -6,12 +6,12 @@
 - ```git clone https://github.com/cfyz7/frontend-project-44```
 - Настройка окружения
 - ```npm link```
-- Запуск игры
+## Запуск игры
 - ```brain-even
-brain-calc
-brain-gcd
-brain-progression
-brain-prime```
+- brain-calc
+- brain-gcd
+- brain-progression
+- brain-prime```
 
 ## Описание
 Проект был реализаван на нативном JS.
