@@ -2,6 +2,7 @@
 [![Actions Status](https://github.com/cfyz7/frontend-project-44/workflows/hexlet-check/badge.svg)](https://github.com/cfyz7/frontend-project-44/actions) 
 
 ## Установка
+- Перед установкой убедитесь в исправности терминала и в наличии node.js 
 - Клонирование репозитория
 - ```git clone https://github.com/cfyz7/frontend-project-44```
 - Настройка окружения
@@ -11,7 +12,7 @@
 - ```brain-calc```
 - ```brain-gcd```
 - ```brain-progression```
-- `brain-prime`
+- ```brain-prime```
 
 ## Описание
 Проект был реализаван на нативном JS. 
