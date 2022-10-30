@@ -4,7 +4,7 @@
 ## Установка
 - Перед установкой убедитесь в исправности терминала и в наличии node.js 
 - Клонирование репозитория
-- ```git clone https://github.com/cfyz7/frontend-project-44```
+- ```git clone git@github.com:cfyz7/frontend-project-44.git```
 - Настройка окружения
 - ```npm link```
 ## Запуск игры
