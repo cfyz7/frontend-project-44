@@ -20,7 +20,7 @@
 По итогу вас либо поздравят с победой, либо предложат сыграть ещё. Удачи!
 
 ## Примеры удачной игры
-![Удачная игра](https://github.com/cfyz7/frontend-project-44/raw/master/images/game1.png)
+![Удачная игра](https://github.com/cfyz7/frontend-project-44/blob/main/images/game1.png)
 
 ## Пример неудачной игры
 ![Неудачная игра](https://github.com/cfyz7/frontend-project-44/raw/master/images/game2.png)
