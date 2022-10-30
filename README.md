@@ -1,6 +1,13 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/cfyz7/frontend-project-44/workflows/hexlet-check/badge.svg)](https://github.com/cfyz7/frontend-project-44/actions) 
 
+## Установка
+- Клонирование репозитория
+- ```git clone https://github.com/cfyz7/frontend-project-44```
+- Настройка окружения
+- ```npm link```
+- Запуск игры
+
 ## Описание
 Проект был реализаван на нативном JS.
 Вам будет предложенно сыграть в одну из пяти игр. В ходе игры вы должны будете ответить на вопрос, о том как вас зовут, а также вопрос касающийся непосредственно выбранной вами игры. Если ответ на игровой вопрос об будет правельным, вам предложат ещё один вопрос, и так далее(но не больше трех).
