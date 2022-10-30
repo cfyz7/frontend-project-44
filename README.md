@@ -7,11 +7,11 @@
 - Настройка окружения
 - ```npm link```
 ## Запуск игры
-- ```brain-even
-- brain-calc
-- brain-gcd
-- brain-progression
-- brain-prime```
+- ```brain-even```
+- ```brain-calc```
+- ```brain-gcd```
+- ```brain-progression```
+- `brain-prime`
 
 ## Описание
 Проект был реализаван на нативном JS.
