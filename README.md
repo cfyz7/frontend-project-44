@@ -8,7 +8,6 @@
 
 ## Примеры удачной и неудачной игры
 ![Удачная игра](https://github.com/cfyz7/frontend-project-44/raw/master/images/game1.png)
-![Неудачная игра](https://github.com/cfyz7/frontend-project-44/raw/master/images/game2.png)
 
 ## Минимальные системные требования
 - Операционная система Linux(Ubuntu), MacIOS, или Windows 10 и выше с наличием командной строки
