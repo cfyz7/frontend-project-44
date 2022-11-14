@@ -1,9 +1,9 @@
 import gamesForMind from '../index.js';
-import randomNumber from '../makeRandom.js';
+import getRandomNumber from '../makeRandom.js';
 
 export const uniqQuestion = () => 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-const reviewNumber = (num) => {
+const isPrime = (num) => {
   const array = [];
   for (let i = 0; i <= num; i += 1) {
     if (num % i === 0) {
@@ -17,8 +17,8 @@ const reviewNumber = (num) => {
 };
 
 const reviewResult = () => {
-  const question = randomNumber(1, 100);
-  const result = reviewNumber(question) ? 'yes' : 'no';
+  const question = getRandomNumber(1, 100);
+  const result = isPrime(question) ? 'yes' : 'no';
   return [question, result];
 };
 

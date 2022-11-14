@@ -1,20 +1,25 @@
 import gamesForMind from '../index.js';
-import randomNumber from '../makeRandom.js';
+import getRandomNumber from '../makeRandom.js';
 
 export const uniqQuestion = () => 'What number is missing in the progression?';
 
-const reviewResult = () => {
-  const step = randomNumber(1, 10);
-  const numLength = randomNumber(4, 9);
-  const numDoddge = randomNumber(0, numLength);
-  const num = randomNumber(1, 100);
+const getProgression = (num, step, numLength) => {
   const makeArray = [];
   for (let i = num, j = 0; j <= numLength; j += 1, i += step) {
     makeArray.push(i);
   }
-  const result = String(makeArray[numDoddge]);
-  makeArray[numDoddge] = '..';
-  const question = makeArray.join(' ');
+  return makeArray;
+};
+
+const reviewResult = () => {
+  const numLength = getRandomNumber(4, 9);
+  const num = getRandomNumber(1, 100);
+  const step = getRandomNumber(1, 10);
+  const numDoddge = getRandomNumber(0, numLength);
+  const array = getProgression(num, step, numLength);
+  const result = String(array[numDoddge]);
+  array[numDoddge] = '..';
+  const question = array.join(' ');
   return [question, result];
 };
 

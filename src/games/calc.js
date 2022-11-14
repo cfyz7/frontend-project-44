@@ -1,29 +1,26 @@
 import gamesForMind from '../index.js';
-import randomNumber from '../makeRandom.js';
+import getRandomNumber from '../makeRandom.js';
 
 export const uniqQuestion = () => 'What is the result of the expression?';
 const chars = ['+', '-', '*'];
-const reviewNumber = (nums) => {
-  console.log(nums);
-  let total = 0;
-  const modString = nums.split(' ');
-  const char = modString[1];
-  const num1 = Number(modString[0]);
-  const num2 = Number(modString[2]);
-  if (char === '+') {
-    total = num1 + num2;
-  } else if (char === '-') {
-    total = num1 - num2;
-  } else {
-    total = num1 * num2;
+
+const calcNumbers = (num1, char, num2) => {
+  switch (char) {
+    case '+':
+      return String(num1 + num2);
+    case '-':
+      return String(num1 - num2);
+    default:
+      return String(num1 * num2);
   }
-  total = String(total);
-  return total;
 };
 
 const reviewResult = () => {
-  const question = `${randomNumber(1, 100)} ${chars[randomNumber(0, 2)]} ${randomNumber(1, 100)}`;
-  const result = reviewNumber(question);
+  const num1 = getRandomNumber(1, 100);
+  const num2 = getRandomNumber(1, 100);
+  const char = chars[getRandomNumber(0, 2)];
+  const question = `${num1} ${char} ${num2}`;
+  const result = calcNumbers(num1, char, num2);
   return [question, result];
 };
 

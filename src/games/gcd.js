@@ -1,34 +1,21 @@
 import _ from 'lodash';
-import randomNumber from '../makeRandom.js';
+import getRandomNumber from '../makeRandom.js';
 import gamesForMind from '../index.js';
 
 export const uniqQuestion = () => 'Find the greatest common divisor of given numbers.';
 
-const reviewNumber = (numbers) => {
-  let total = [];
-  const result1 = [];
-  const result2 = [];
-  const modString = numbers.split(' ');
-  const num1 = Number(modString[0]);
-  const num2 = Number(modString[1]);
-  for (let i = 1; i <= num1; i += 1) {
-    if (num1 % i === 0) {
-      result1.push(i);
-    }
-  }
-  for (let i = 1; i <= num2; i += 1) {
-    if (num2 % i === 0) {
-      result2.push(i);
-    }
-  }
-  total = _.intersection(result1, result2);
-  total = String(total.at(-1));
-  return total;
-};
+const reviewNumber = function(num1, num2) {
+  if (!num2) {
+    return num1;
+  } 
+  return reviewNumber(num2, num1 % num2);
+}
 
 const reviewResult = () => {
-  const question = `${randomNumber(1, 100)} ${randomNumber(1, 100)}`;
-  const result = reviewNumber(question);
+  const num1 = getRandomNumber(1, 100)
+  const num2 = getRandomNumber(1, 100) 
+  const question = `${num1} ${num2}`;
+  const result = String(reviewNumber(num1, num2))
   return [question, result];
 };
 
