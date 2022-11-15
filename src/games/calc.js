@@ -18,7 +18,7 @@ const calcNumbers = (num1, char, num2) => {
 const reviewResult = () => {
   const num1 = getRandomNumber(1, 100);
   const num2 = getRandomNumber(1, 100);
-  const char = chars[getRandomNumber(0, chars.length - 1)]
+  const char = chars[getRandomNumber(0, chars.length - 1)];
   const question = `${num1} ${char} ${num2}`;
   const result = calcNumbers(num1, char, num2);
   return [question, result];
