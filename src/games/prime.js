@@ -1,7 +1,7 @@
-import gamesForMind from '../index.js';
+import runEngine from '../index.js';
 import getRandomNumber from '../makeRandom.js';
 
-export const uniqQuestion = () => 'Answer "yes" if given number is prime. Otherwise answer "no".';
+export const uniqQuestion = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const isPrime = (num) => {
   const array = [];
@@ -22,5 +22,5 @@ const reviewResult = () => {
   return [question, result];
 };
 
-const gamePrime = () => gamesForMind(uniqQuestion, reviewResult);
+const gamePrime = () => runEngine(uniqQuestion, reviewResult);
 export default gamePrime;

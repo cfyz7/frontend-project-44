@@ -1,7 +1,7 @@
 import getRandomNumber from '../makeRandom.js';
 import gamesForMind from '../index.js';
 
-export const uniqQuestion = () => 'Answer "yes" if the number is even, otherwise answer "no".';
+export const uniqQuestion = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const isEven = (num) => num % 2 === 0;
 

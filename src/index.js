@@ -2,11 +2,11 @@ import readlineSync from 'readline-sync';
 
 const totalRound = 3;
 
-const gamesForMind = (uniqQuestion, reviewResult) => {
+const runEngine = (uniqQuestion, reviewResult) => {
   console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
-  console.log(uniqQuestion());
+  console.log(uniqQuestion);
   for (let i = 1; i <= totalRound; i += 1) {
     const [question, result] = reviewResult();
     console.log(`Question: ${question}`);
@@ -19,4 +19,4 @@ const gamesForMind = (uniqQuestion, reviewResult) => {
   }
   console.log(`Congratulations, ${userName}!`);
 };
-export default gamesForMind;
+export default runEngine;

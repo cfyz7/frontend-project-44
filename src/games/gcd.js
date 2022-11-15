@@ -1,7 +1,7 @@
 import getRandomNumber from '../makeRandom.js';
-import gamesForMind from '../index.js';
+import runEngine from '../index.js';
 
-export const uniqQuestion = () => 'Find the greatest common divisor of given numbers.';
+export const uniqQuestion = 'Find the greatest common divisor of given numbers.';
 
 const reviewNumber = function gcd(num1, num2) {
   if (!num2) {
@@ -18,5 +18,5 @@ const reviewResult = () => {
   return [question, result];
 };
 
-const gameGcd = () => gamesForMind(uniqQuestion, reviewResult);
+const gameGcd = () => runEngine(uniqQuestion, reviewResult);
 export default gameGcd;
