@@ -3,7 +3,7 @@ import gamesForMind from '../index.js';
 
 export const uniqQuestion = () => 'Find the greatest common divisor of given numbers.';
 
-const reviewNumber = function gcd (num1, num2) {
+const reviewNumber = function gcd(num1, num2) {
   if (!num2) {
     return num1;
   }
